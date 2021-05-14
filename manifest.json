@@ -1,0 +1,16 @@
+{
+    "name": "PWA_Example",
+    "short_name": "PWA_Ex",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2A3443",
+    "description": "A demo app to test out pwas",
+    "theme_color": "#2A3443",
+    "icons": [
+      {
+        "src": "./img/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

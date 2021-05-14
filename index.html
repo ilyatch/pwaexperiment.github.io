@@ -11,15 +11,19 @@
 
         function sendMessageToSw()
         {
-            console.log('send message...');
+            console.log(`send message...${new Date().toLocaleString()}`);
         }
+
+
+        var sw;// = serviceWorkerRegistration.active;
 
 async function registerSW() { 
   if ('serviceWorker' in navigator) { 
     try 
     {
         console.log("registering service worker.")
-        await navigator.serviceWorker.register('./sw.js'); 
+        sw = await navigator.serviceWorker.register('./sw.js').active; 
+
         console.log("registered service worker.")
 
         navigator.serviceWorker.addEventListener('message', event => {

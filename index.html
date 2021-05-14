@@ -5,4 +5,22 @@
     <body>
         <h1>Test gitbhub page, hoping it's https</h1>
     </body>
+
+    <script>
+
+async function registerSW() { 
+  if ('serviceWorker' in navigator) { 
+    try {
+      await navigator.serviceWorker.register('./sw.js'); 
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.'); 
+    }
+  } else {
+    //document.querySelector('.alert').removeAttribute('hidden'); 
+  }
+}
+
+registerSW();
+
+    </script>
 </html>

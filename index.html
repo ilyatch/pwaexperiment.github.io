@@ -32,6 +32,11 @@ async function registerSW() {
         });
 
 
+        navigator.serviceWorker.ready.then( registration => {
+    registration.active.postMessage("Hi service worker");
+  });
+
+
     } catch (e) {
       alert('ServiceWorker registration failed. Sorry about that.'); 
     }

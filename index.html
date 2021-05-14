@@ -5,9 +5,22 @@
     <body>
         <h1>Test gitbhub page, hoping it's https</h1>
         <button onclick="sendMessageToSw()">Click me</button>
+        <br/>
+        <input id="txtInput" type="text"/>
+        <button onclick="add()">Add</button>
     </body>
 
     <script>
+
+        function add()
+        {
+            var input = document.getElementById("txtInput");
+            console.log(`will be adding input with text ${input.value}`);
+        }
+
+        if(self.IndexedDB){
+            console.log('IndexedDB is supported');
+        }
 
         function sendMessageToSw()
         {
